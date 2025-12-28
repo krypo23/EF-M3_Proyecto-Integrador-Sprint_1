@@ -1,109 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="bi bi-list-columns-reverse">Gourmet Go - Buscador de Recetas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
-<header class="bg-light py-5 mb-5 text-center">
+    <header class="bg-light py-5 mb-5 text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Gourmet Go</h1>
             <p class="lead text-muted">Encuentra la receta para cada ocasión</p>
-            
+
             <div class="row justify-content-center mt-4">
                 <div class="col-md-8 col-lg-6">
                     <form>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Busca por ingrediente (ej: Pollo)..." aria-label="Buscar receta">
-                            <button class="btn btn-primary" type="button">Buscar</button>
+                            <input type="text" class="form-control"
+                                placeholder="Busca por ingrediente en INGLES (ej: onion, chicken,potato)..."
+                                aria-label="Buscar receta">
+                            <button class="btn btn-primary" type="button" id="botonBuscar">Buscar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </header>
-  <main class="container mb-5">
+    <main class="container mb-5">
         <h2 class="text-center mb-4">Recetas Destacadas</h2>
-        
-        <div class="row g-4">
-            
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://dummyimage.com/600x400/e67e22/ffffff&text=Pizza+Casera" class="card-img-top" alt="Pizza">
-                    <div class="card-body">
-                        <h5 class="card-title">Pizza Casera</h5>
-                        <p class="card-text">Una deliciosa pizza con masa madre y salsa de tomate fresca.</p>
-                        <a href="#" class="btn btn-primary w-100">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://dummyimage.com/600x400/2ecc71/ffffff&text=Ensalada+Cesar" class="card-img-top" alt="Ensalada">
-                    <div class="card-body">
-                        <h5 class="card-title">Ensalada César</h5>
-                        <p class="card-text">Clásica, ligera y con el aderezo original.</p>
-                        <a href="#" class="btn btn-primary w-100">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://dummyimage.com/600x400/5d4037/ffffff&text=Brownie" class="card-img-top" alt="Postre">
-                    <div class="card-body">
-                        <h5 class="card-title">Brownie de Chocolate</h5>
-                        <p class="card-text">El postre perfecto para los amantes del cacao.</p>
-                        <a href="#" class="btn btn-primary w-100">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://dummyimage.com/600x400/c0392b/ffffff&text=Spaghetti" class="card-img-top" alt="Pasta">
-                    <div class="card-body">
-                        <h5 class="card-title">Spaghetti Bolognese</h5>
-                        <p class="card-text">Pasta fresca con salsa de carne italiana.</p>
-                        <a href="#" class="btn btn-primary w-100">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://dummyimage.com/600x400/f1c40f/000000&text=Tacos" class="card-img-top" alt="Tacos">
-                    <div class="card-body">
-                        <h5 class="card-title">Tacos al Pastor</h5>
-                        <p class="card-text">Sabor mexicano auténtico con piña y cilantro.</p>
-                        <a href="#" class="btn btn-primary w-100">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://dummyimage.com/600x400/3498db/ffffff&text=Sushi+Roll" class="card-img-top" alt="Sushi">
-                    <div class="card-body">
-                        <h5 class="card-title">Sushi Roll</h5>
-                        <p class="card-text">Roll de salmón y palta, fresco y saludable.</p>
-                        <a href="#" class="btn btn-primary w-100">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-
+        <div id="resultsContainer" class="row g-4">
+            <!-- Las recetas se insertan aquí dinámicamente -->
         </div>
+
     </main>
 
     <footer class="text-center py-4 bg-light border-top">
         <p class="mb-0 text-muted">© 2025 Gourmet Go. Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
+    <script src="assets/js/app.js"></script>
+    <div class="modal fade" id="recetaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitulo">Cargando...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalCuerpo">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
