@@ -1,16 +1,16 @@
 /* style.css */
 
 body {
-    background-color: #f8f9fa; /* Un gris muy suave para no usar blanco puro */
+    background-color: #f8f9fa; /* Un gris suave*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Ajuste visual para el título principal */
+/* titulo principal */
 h1 {
     color: #2c3e50;
 }
 
-/* Pequeño efecto al pasar el mouse sobre las tarjetas */
+/* efecto sobre las tarjetas*/
 .card {
     transition: transform 0.2s;
     border: none; /* Quitamos el borde por defecto de bootstrap para que se vea más moderno */
@@ -20,7 +20,7 @@ h1 {
     transform: translateY(-5px);
 }
 
-/* Personalizamos un poco el botón */
+/* boton */
 .btn-primary {
     background-color: #ff6b6b; /* Un color 'Gourmet' (tipo salmón/rojo) */
     border-color: #ff6b6b;
